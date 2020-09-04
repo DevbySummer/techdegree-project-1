@@ -43,7 +43,7 @@ a:hover {
 .nav .name {
     display: block;
     margin-right: auto;
-    color: white;
+    color: #fff;
 }
 .nav li {
   padding: 5px 10px 10px 10px;
@@ -52,15 +52,17 @@ a:hover {
   transition: all .5s;
 }
 .nav a:hover {
-  color: white
+  color: #fff;
+  border-bottom: 2px solid #fff;
 }
 
 header {
   text-align: center;
-  background: url('images/new_background.jpg') no-repeat top center ;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url("images/new_background.jpg"); /* Took this snippet from a previous project I worked on*/
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
+  background-attachment: fixed;
 }
 header {
   line-height: 1.5;
@@ -70,15 +72,15 @@ header .profile-image {
   width: 150px;
   height: 170px;
   border-radius: 20%;
-  border: 3px solid white;
-  transition: all .5s;
+  transition: all .3s;
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.05);
 }
 .tag {
-  background-color: #efefef;
-  color: black;
+  /* background-color: #efefef; */
+  background-color: transparent;
+  color: #fff;
   padding: 10px;
   border-radius: 5px;
   display: table;
@@ -86,9 +88,13 @@ header .profile-image:hover {
 } 
 
 .location {
-  background-color: #222;
+  /* background-color: #222; */
   color: #fff;
 }
+h1, h2 {
+  letter-spacing: .6px;
+}
+
 .card {
   margin: 30px;
   padding: 20px 40px 40px;
@@ -101,6 +107,9 @@ header .profile-image:hover {
 }
 .card:hover {
   border-color: #33ff00;
+  background: #222;
+  color: #fff;
+  font-size: 17px;
 }
 
 ul.skills {
@@ -115,6 +124,11 @@ ul.skills {
   color: white;
   padding: 5px 10px;
   margin: 2px;
+  transition: all .3s;
+}
+
+.skills li:hover {
+  transform: scale(1.15);
 }
 
 .skills li:nth-child(odd) {
@@ -152,9 +166,7 @@ a.social {
   opacity: .4;
   transition: all .5s;
 }
-a.twitter {
-  background-image: url(images/twitter.svg);
-}
+
 a.linkedin {
   background-image: url(images/linkedin.svg);
 }
